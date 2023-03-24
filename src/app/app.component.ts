@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TD1Ex2';
+  titre:string = 'TD1Ex2';
+
+  imageUrl:string = "https://www.intiformation.com/wp-content/uploads/2021/05/ezgif-2-2cdc70725914.gif";
 }
