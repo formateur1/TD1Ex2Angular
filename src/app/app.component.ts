@@ -13,4 +13,9 @@ export class AppComponent {
   nomClasse:string = "texte";
 
   bouton:boolean = true;
+
+  onClick():void 
+  {
+    console.log("bouton cliqué");
+  }
 }
