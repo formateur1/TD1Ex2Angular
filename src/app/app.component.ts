@@ -18,4 +18,27 @@ export class AppComponent {
   {
     console.log("bouton cliqué");
   }
+
+  utilisateur:any[] = [
+    {"nom":"Dupont", "prenom":"Jean", "email":"info@info.fr", "tel":"010203", "age":28},
+    {"nom":"Durand", "prenom":"Louis", "email":"info1@info.fr", "tel":"010203", "age":36},
+    {"nom":"Titi", "prenom":"Sophie", "email":"info2@info.fr", "tel":"010203", "age":29},
+    {"nom":"Toto", "prenom":"Paul", "email":"inf3o@info.fr", "tel":"010203", "age":49},
+    {"nom":"Tutu", "prenom":"Marie", "email":"info4@info.fr", "tel":"010203", "age":33}
+  ]
+
+  detailBouton:boolean = true;
+
+  cacherDetails():void
+  {
+    // if(this.detailBouton)
+    // {
+    //   this.detailBouton = false;
+    // }
+    // else
+    // {
+    //   this.detailBouton = true;
+    // }
+    this.detailBouton = !this.detailBouton;
+  }
 }

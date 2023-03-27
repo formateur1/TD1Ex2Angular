@@ -7,3 +7,27 @@
 <button [disabled]="bouton">Mon bouton</button>
 
 <button (click)="onClick()">Mon bouton</button>
+
+<br><br>
+
+<button (click)="cacherDetails()" *ngIf="detailBouton; else faux">Cacher détails</button>
+<ng-template #faux> <button (click)="cacherDetails()">Montrer détails</button> </ng-template>
+
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th *ngIf="detailBouton">Email</th>
+        <th *ngIf="detailBouton">Téléphone</th>
+        <th *ngIf="detailBouton">Age</th>
+    </tr>
+
+    <tr *ngFor="let u of utilisateur">
+        <td>{{ u.nom }}</td>
+        <td>{{ u.prenom }}</td>
+        <td *ngIf="detailBouton">{{ u.email }}</td>
+        <td *ngIf="detailBouton">{{ u.tel }}</td>
+        <td *ngIf="detailBouton">{{ u.age }}</td>
+    </tr>
+
+</table>
