@@ -41,4 +41,15 @@ export class AppComponent {
     // }
     this.detailBouton = !this.detailBouton;
   }
+
+  saisie:string = "";
+
+  oUtil: { nom: string; prenom: string; email: string; tel: string; age: number; } = 
+  {"nom":"Test", "prenom":"Test", "email":"Test", "tel":"test", "age":24};
+
+  ajouterUser():void
+  {
+    this.oUtil.nom = this.saisie;
+    this.utilisateur.push(this.oUtil);
+  }
 }
